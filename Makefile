@@ -1,7 +1,10 @@
 obj-m += lxmod.o
 
+KERNELDIR ?= /lib/modules/$(shell uname -r)/build
+PWD := $(shell pwd)
+
 all:
-		make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	$(MAKE) -C $(KERNELDIR) M=$(PWD)
 
 clean:
-		make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	$(RM) *.o *~ core .depend .*.cmd *.ko *.mod.c *.tmp_versions *.mod modules.order *.symvers built-in.a
