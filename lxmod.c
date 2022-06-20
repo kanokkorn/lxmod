@@ -1,8 +1,9 @@
 #include <linux/module.h>
 #include <linux/kernel.h>
+#include <linux/types.h>
 
-MODULE_LICENSE("BSD");
-MODULE_DESCRIPTION ("Host controller for BAG-1");
+MODULE_LICENSE("BSD 2");
+MODULE_DESCRIPTION ("kernel module for custom device");
 MODULE_AUTHOR ("Kanokkorn Kornkankit");
 
 
