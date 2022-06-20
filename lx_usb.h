@@ -14,4 +14,6 @@ struct usb_host_endpoint {
   int streams;
 };
 
+static struct usb_driver skel_driver;
+
 #endif /* _LX_USB_H_ */
