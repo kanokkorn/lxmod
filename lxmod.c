@@ -1,6 +1,11 @@
+#ifdef __linux__
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/types.h>
+#elif defined(__FreeBSD__)
+
+/* BSD code */
+#endif
 
 MODULE_LICENSE("BSD 2");
 MODULE_DESCRIPTION ("kernel module for custom device");
